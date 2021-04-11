@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Food Ordering System</string>
+    <!-- Urls -->
+    <string name="url_login">http://rjtmobile.com/ansari/fos/fosapp/fos_login.php?&amp;user_phone=%s&amp;user_password=%s</string>
+    <!-- Strings related to login -->
+    <string name="prompt_phone_number">Phone Number</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign In</string>
+    <string name="action_sign_up">Sign Up</string>
+    <string name="action_reset_password">Reset Password</string>
+    <string name="invalid_phone">Not a valid phone number!</string>
+    <string name="invalid_password">Password must contains at least 4 characters!</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="login_failed">Login failed.</string>
 </resources>

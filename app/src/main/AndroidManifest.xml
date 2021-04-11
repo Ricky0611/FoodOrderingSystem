@@ -8,11 +8,12 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/food_deivery_icon"
+        android:icon="@drawable/food_delivery_icon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".LoginActivity"></activity>
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,7 +21,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" android:label="@string/app_name"/>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" />
     </application>
 
 </manifest>
