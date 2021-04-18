@@ -1,0 +1,10 @@
+<resources>
+    <dimen name="splash_header_text_size">50dp</dimen>
+    <dimen name="header_text_size">30dp</dimen>
+    <dimen name="fragment_horizontal_margin">16dp</dimen>
+    <dimen name="fragment_vertical_margin">16dp</dimen>
+    <dimen name="textview_margin">24dp</dimen>
+    <dimen name="image_width_percent">0.4</dimen>
+    <dimen name="button_width_percent">0.7</dimen>
+    <dimen name="icon_width_percent">0.2</dimen>
+</resources>
