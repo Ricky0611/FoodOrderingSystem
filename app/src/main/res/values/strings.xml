@@ -4,6 +4,8 @@
     <string name="url_login">http://rjtmobile.com/ansari/fos/fosapp/fos_login.php?&amp;user_phone=%s&amp;user_password=%s</string>
     <string name="url_register">http://rjtmobile.com/ansari/fos/fosapp/fos_reg.php?&amp;user_name=%s&amp;user_email=%s&amp;user_phone=%s&amp;user_password=%s&amp;user_add=%s</string>
     <string name="url_reset">http://rjtmobile.com/ansari/fos/fosapp/fos_reset_pass.php?&amp;user_phone=%s&amp;user_password=%s&amp;newpassword=%s</string>
+    <string name="url_food">http://rjtmobile.com/ansari/fos/fosapp/fos_food_loc.php?city=%s</string>
+    <string name="url_update_address">http://rjtmobile.com/ansari/fos/fosapp/fos_update_address.php?&amp;user_phone=%s&amp;user_password=%s&amp;user_add=%s</string>
     <!-- Strings related to login -->
     <string name="prompt_phone_number">Phone Number</string>
     <string name="prompt_password">Password</string>
@@ -28,4 +30,49 @@
     <string name="button_submit">Submit</string>
     <string name="invalid_password_match">The new password should be consistent.</string>
     <string name="reset_success">Password reset successfully!</string>
+    <!-- Strings related to bottom navigation bar -->
+    <string name="bottom_home">Home</string>
+    <string name="bottom_orders">Orders</string>
+    <string name="bottom_userInfo">User</string>
+    <string name="bottom_checkout">Checkout</string>
+    <!-- Strings related to food -->
+    <string name="delivery_from">From</string>
+    <string-array name="foodCities">
+        <item>City</item>
+        <item>Delhi</item>
+        <item>Banglore</item>
+    </string-array>
+    <string name="food_veg">Veg Food</string>
+    <string name="food_non_veg">Non Veg Food</string>
+    <string name="tool_bar_cart_items">Cart</string>
+    <string name="add_to_cart_button">Add to Cart</string>
+    <string name="food_quantity">Quantity:</string>
+    <string name="Quantity_Null">Quantity cannot be zero!</string>
+    <!-- Strings related to user info -->
+    <string name="personal_info_logout">LogOut</string>
+    <string name="personal_info_default_address">Default Address</string>
+    <string name="register_user_address_error">Please enter your address</string>
+    <string name="personal_info_updateAdd">Update Address</string>
+    <string name="personal_info_shipping_confirm">Confirm Address</string>
+    <string name="dialog_title">Please enter your password</string>
+    <string-array name="countries">
+        <item>USA</item>
+        <item>INDIA</item>
+        <item>UK</item>
+        <item>MEX</item>
+    </string-array>
+    <string-array name="states">
+        <item>IL</item>
+        <item>CA</item>
+        <item>Mass</item>
+        <item>Or</item>
+        <item>NY</item>
+        <item>NJ</item>
+        <item>PHI</item>
+        <item>BT</item>
+        <item>MO</item>
+        <item>WA</item>
+        <item>AL</item>
+        <item>NH</item>
+    </string-array>
 </resources>

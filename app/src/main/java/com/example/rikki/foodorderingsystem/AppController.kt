@@ -1,12 +1,10 @@
 package com.example.rikki.foodorderingsystem
 
 import android.content.Context
-import android.graphics.Bitmap
-import androidx.collection.LruCache
 import com.android.volley.Request
 import com.android.volley.RequestQueue
-import com.android.volley.toolbox.ImageLoader
 import com.android.volley.toolbox.Volley
+import java.util.*
 
 class AppController constructor(context: Context) {
 
@@ -58,16 +56,68 @@ class AppController constructor(context: Context) {
         return sharedPref.getString("UserAddress", "") ?: ""
     }
 
-    val imageLoader: ImageLoader by lazy {
-        ImageLoader(requestQueue,
-            object : ImageLoader.ImageCache {
-                private val cache = LruCache<String, Bitmap>(20)
-                override fun getBitmap(url: String): Bitmap? {
-                    return cache.get(url)
-                }
-                override fun putBitmap(url: String, bitmap: Bitmap) {
-                    cache.put(url, bitmap)
-                }
-            })
+    fun setUserUpdatedAddress(address: String) {
+        with(sharedPref.edit()) {
+            putString("UserDeliveryAddress", address)
+            apply()
+        }
+    }
+
+    fun getUserUpdatedAddress() : String {
+        return sharedPref.getString("UserDeliveryAddress", "") ?: ""
+    }
+
+    fun getUserEmail() : String {
+        return sharedPref.getString("UserEmail", "") ?: ""
+    }
+
+    fun clearUserInfo() : Boolean {
+        return with(sharedPref.edit()) {
+            clear()
+            commit()
+        }
+    }
+
+    private var mFoodItemList = ArrayList<FoodItem>()
+
+    fun getFoodItemList() : ArrayList<FoodItem> {
+        return mFoodItemList
+    }
+
+    fun setFoodItemLists(mFoodItemLists: ArrayList<FoodItem>) {
+        mFoodItemList = mFoodItemLists
+    }
+
+    fun getVegFood(): ArrayList<FoodItem> {
+        val vegList = ArrayList<FoodItem>()
+        for (foodItem in mFoodItemList) {
+            if (foodItem.foodCat.equals("veg", ignoreCase = true))
+                vegList.add(foodItem)
+        }
+        return vegList
+    }
+
+
+    fun getNonVegFood(): ArrayList<FoodItem> {
+        val nonVegList = ArrayList<FoodItem>()
+        for (foodItem in mFoodItemList) {
+            if (foodItem.foodCat.equals("non-veg", ignoreCase = true))
+                nonVegList.add(foodItem)
+        }
+        return nonVegList
+    }
+
+    fun getFoodItem(foodItemID: String?): FoodItem? {
+        for (foodItem in mFoodItemList) {
+            if (foodItem.foodId.equals(foodItemID, ignoreCase = true))
+                return foodItem
+        }
+        return null
+    }
+
+    private var mCartItems = CartItems()
+
+    fun getCartItems() : CartItems {
+        return mCartItems
     }
 }
