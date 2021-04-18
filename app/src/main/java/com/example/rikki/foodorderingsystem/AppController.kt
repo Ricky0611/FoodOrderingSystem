@@ -42,6 +42,22 @@ class AppController constructor(context: Context) {
         }
     }
 
+    fun getUserName() : String {
+        return sharedPref.getString("UserName", "") ?: ""
+    }
+
+    fun getUserMobile() : String {
+        return sharedPref.getString("UserPhone", "") ?: ""
+    }
+
+    fun getUserPassword() : String {
+        return sharedPref.getString("UserPassword", "") ?: ""
+    }
+
+    fun getUserAddress() : String {
+        return sharedPref.getString("UserAddress", "") ?: ""
+    }
+
     val imageLoader: ImageLoader by lazy {
         ImageLoader(requestQueue,
             object : ImageLoader.ImageCache {

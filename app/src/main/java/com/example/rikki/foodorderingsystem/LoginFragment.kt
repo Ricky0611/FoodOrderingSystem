@@ -10,8 +10,8 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.android.volley.Request
-import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
+import com.example.rikki.foodorderingsystem.LoginActivity.Companion.SUCCESS
 import kotlinx.android.synthetic.main.fragment_login.view.*
 import org.json.JSONArray
 
@@ -21,13 +21,12 @@ class LoginFragment : Fragment() {
     private lateinit var loginView: View
     private lateinit var phoneText: EditText
     private lateinit var pswdText: EditText
-    private val SUCCESS = "success"
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         loginView = inflater.inflate(R.layout.fragment_login, container, false)
         phoneText = loginView.username
         pswdText = loginView.password
@@ -44,11 +43,21 @@ class LoginFragment : Fragment() {
         }
         // register
         loginView.regBtn.setOnClickListener {
-            //
+            activity?.supportFragmentManager?.beginTransaction()?.apply {
+                setReorderingAllowed(true)
+                replace(R.id.container, RegisterFragment())
+                addToBackStack(null)
+                commit()
+            }
         }
         // reset
         loginView.resetBtn.setOnClickListener {
-            //
+            activity?.supportFragmentManager?.beginTransaction()?.apply {
+                setReorderingAllowed(true)
+                replace(R.id.container, ResetFragment())
+                addToBackStack(null)
+                commit()
+            }
         }
         return loginView
     }
@@ -58,7 +67,7 @@ class LoginFragment : Fragment() {
         val loginRequest = StringRequest(
             Request.Method.GET,
             loginUrl,
-            Response.Listener<String> { response ->
+            { response ->
                 Log.d(TAG, response)
                 loginView.loading.visibility = View.GONE
                 if (response.contains(SUCCESS)) {
@@ -75,7 +84,7 @@ class LoginFragment : Fragment() {
                 } else {
                     Toast.makeText(requireActivity(), resources.getString(R.string.login_failed), Toast.LENGTH_SHORT).show()
                 }
-            }, Response.ErrorListener { error ->
+            }, { error ->
                 Log.d(TAG, error.toString())
                 loginView.loading.visibility = View.GONE
                 Toast.makeText(requireActivity(), error.message, Toast.LENGTH_SHORT).show()
