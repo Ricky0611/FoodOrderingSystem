@@ -23,7 +23,12 @@ class CartItems {
 
     fun putintoHashMap(selectedProduct: FoodItem, i: Int) {
         itemQuantity[selectedProduct]?.let {
-            itemQuantity[selectedProduct] = it + i
+            if (it + i == 0) {
+                itemQuantity.remove(selectedProduct)
+                cartItemsList.remove(selectedProduct)
+            } else {
+                itemQuantity[selectedProduct] = it + i
+            }
         }
     }
 
