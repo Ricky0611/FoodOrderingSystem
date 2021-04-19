@@ -24,7 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:layout_toEndOf="@id/cartItemImage"
             android:id="@+id/cartItemTitle"/>
         <TextView
@@ -32,6 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/cartItemTitle"
             android:layout_toEndOf="@id/cartItemImage"
+            android:layout_marginTop="10dp"
             android:textSize="15sp"
             android:id="@+id/cartItemDesc"/>
         <TextView
@@ -39,12 +40,14 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/cartItemDesc"
             android:layout_toEndOf="@id/cartItemImage"
+            android:layout_marginTop="5dp"
             android:id="@+id/cartItemquantityPrice"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:id="@+id/cartItemTotal"
+            android:layout_marginTop="5dp"
             android:layout_below="@+id/cartItemquantityPrice"
             android:layout_toEndOf="@id/cartItemImage" />
         <LinearLayout
@@ -58,7 +61,8 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:id="@+id/decrimentCartItem"
-                android:src="@drawable/ic_delete"/>
+                android:src="@drawable/ic_delete"
+                android:layout_gravity="center_vertical"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -69,17 +73,18 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:id="@+id/incrimentCartItem"
-                android:src="@drawable/ic_add"/>
+                android:src="@drawable/ic_add"
+                android:layout_gravity="center_vertical"/>
 
         </LinearLayout>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="gone"
             android:id="@+id/textViewAlert"
             android:textColor="@color/colorAccent"
             android:layout_below="@id/cartItemTotal"
-            android:layout_alignBottom="@+id/cartItemImage"
+            android:visibility="gone"
             android:layout_alignParentEnd="true" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

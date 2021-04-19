@@ -63,8 +63,8 @@ class CartAdapter(val mContext: Context, val mNotifyFragment: NotifyFragment) : 
         private fun itemDecrimented(products: FoodItem, poition: Int) {
             val cartItems = appContext.getCartItems()
             val quantity = appContext.getCartItems().getItemQuantity()[products] ?: 1
-            if (quantity > 0) {
-                textViewAlert.visibility = View.INVISIBLE
+            if (quantity > 1) {
+                textViewAlert.visibility = View.GONE
                 cartItems.putintoHashMap(products, -1)
                 notifyItemChanged(poition)
             } else {
