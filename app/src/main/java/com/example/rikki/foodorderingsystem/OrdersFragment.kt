@@ -70,7 +70,7 @@ class OrdersFragment : Fragment() {
                     val result = JSONObject(response).getJSONArray("Order Detail").getJSONObject(0)
                     orderView.orderIdText.text = result.getString("OrderId")
                     orderView.totalOrderText.text = result.getString("TotalOrder")
-                    orderView.orderStatusText.text = result.getString("OrderStatus")
+                    orderView.orderStatusText.text = getStatus(result.getString("OrderStatus"))
                     orderView.orderDateText.text = result.getString("OrderDate")
                     orderView.trackingCard.visibility = View.VISIBLE
                 }

@@ -8,6 +8,7 @@
     <string name="url_update_address">http://rjtmobile.com/ansari/fos/fosapp/fos_update_address.php?&amp;user_phone=%s&amp;user_password=%s&amp;user_add=%s</string>
     <string name="url_order">http://rjtmobile.com/ansari/fos/fosapp/order_recent.php?&amp;user_phone=%s</string>
     <string name="url_order_status">http://rjtmobile.com/ansari/fos/fosapp/order_track.php?&amp;order_id=%s</string>
+    <string name="url_order_place">http://rjtmobile.com/ansari/fos/fosapp/order_request.php?&amp;order_category=%s&amp;order_name=%s&amp;order_quantity=%s&amp;total_order=%s&amp;order_delivery_add=%s&amp;order_date=%s&amp;user_phone=%s</string>
     <!-- Strings related to login -->
     <string name="prompt_phone_number">Phone Number</string>
     <string name="prompt_password">Password</string>
@@ -97,4 +98,5 @@
     <!-- Strings related to Check out -->
     <string name="button_continue">Continue</string>
     <string name="button_cancel">Cancel</string>
+    <string name="map_dilevery_address">Delivery Address</string>
 </resources>
