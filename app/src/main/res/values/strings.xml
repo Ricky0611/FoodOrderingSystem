@@ -6,6 +6,8 @@
     <string name="url_reset">http://rjtmobile.com/ansari/fos/fosapp/fos_reset_pass.php?&amp;user_phone=%s&amp;user_password=%s&amp;newpassword=%s</string>
     <string name="url_food">http://rjtmobile.com/ansari/fos/fosapp/fos_food_loc.php?city=%s</string>
     <string name="url_update_address">http://rjtmobile.com/ansari/fos/fosapp/fos_update_address.php?&amp;user_phone=%s&amp;user_password=%s&amp;user_add=%s</string>
+    <string name="url_order">http://rjtmobile.com/ansari/fos/fosapp/order_recent.php?&amp;user_phone=%s</string>
+    <string name="url_order_status">http://rjtmobile.com/ansari/fos/fosapp/order_track.php?&amp;order_id=%s</string>
     <!-- Strings related to login -->
     <string name="prompt_phone_number">Phone Number</string>
     <string name="prompt_password">Password</string>
@@ -75,4 +77,24 @@
         <item>AL</item>
         <item>NH</item>
     </string-array>
+    <!-- Strings related to orders -->
+    <string name="hint_search">Search by Order ID</string>
+    <string name="hint_orderId">ID:</string>
+    <string name="hint_orderTotal">$ </string>
+    <string name="hint_orderStatus">Order Status:</string>
+    <string name="hint_orderDate">Date: </string>
+    <string name="hint_orderName">Name:</string>
+    <string name="hint_orderQuantity">Quantity:</string>
+    <string name="hint_orderAddress">Deliver Address:</string>
+    <string name="button_track">Track</string>
+    <string name="button_review">Write a Review</string>
+    <!-- Strings related to review -->
+    <string name="hint_review">Post your review here</string>
+    <string name="previous_review_title">Previous Reviews</string>
+    <string name="empty_review1">No review for this item yet.</string>
+    <string name="empty_review2">Be the first one to write a review for it.</string>
+    <string name="tool_address_map">Address Map</string>
+    <!-- Strings related to Check out -->
+    <string name="button_continue">Continue</string>
+    <string name="button_cancel">Cancel</string>
 </resources>

@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
 import com.example.rikki.foodorderingsystem.LoginActivity.Companion.SUCCESS
+import com.example.rikki.foodorderingsystem.utils.AppController
 import kotlinx.android.synthetic.main.fragment_register.view.*
 
 class RegisterFragment : Fragment() {

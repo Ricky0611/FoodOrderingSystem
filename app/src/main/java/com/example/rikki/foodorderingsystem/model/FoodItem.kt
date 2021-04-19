@@ -1,4 +1,4 @@
-package com.example.rikki.foodorderingsystem
+package com.example.rikki.foodorderingsystem.model
 
 data class FoodItem(
     val foodId: String,

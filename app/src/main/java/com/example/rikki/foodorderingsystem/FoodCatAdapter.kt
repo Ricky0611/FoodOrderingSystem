@@ -11,6 +11,8 @@ import androidx.cardview.widget.CardView
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.rikki.foodorderingsystem.MainActivity.Companion.appContext
+import com.example.rikki.foodorderingsystem.model.CartItems
+import com.example.rikki.foodorderingsystem.model.FoodItem
 import com.squareup.picasso.Picasso
 import java.util.*
 

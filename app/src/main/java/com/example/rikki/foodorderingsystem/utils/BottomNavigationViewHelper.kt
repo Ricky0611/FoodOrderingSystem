@@ -1,4 +1,4 @@
-package com.example.rikki.foodorderingsystem
+package com.example.rikki.foodorderingsystem.utils
 
 import android.annotation.SuppressLint
 import com.google.android.material.bottomnavigation.BottomNavigationItemView

@@ -16,6 +16,7 @@ import com.android.volley.Request
 import com.android.volley.toolbox.JsonObjectRequest
 import com.example.rikki.foodorderingsystem.MainActivity.Companion.appContext
 import com.example.rikki.foodorderingsystem.MainActivity.Companion.defaultCity
+import com.example.rikki.foodorderingsystem.model.FoodItem
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayout.TabLayoutOnPageChangeListener
 import kotlinx.android.synthetic.main.fragment_home.view.*

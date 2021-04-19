@@ -3,6 +3,8 @@ package com.example.rikki.foodorderingsystem
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
+import com.example.rikki.foodorderingsystem.utils.AppController
+import com.example.rikki.foodorderingsystem.utils.BottomNavigationViewHelper
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

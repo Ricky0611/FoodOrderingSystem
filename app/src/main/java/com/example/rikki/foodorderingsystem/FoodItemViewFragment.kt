@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.rikki.foodorderingsystem.MainActivity.Companion.appContext
+import com.example.rikki.foodorderingsystem.model.CartItems
+import com.example.rikki.foodorderingsystem.model.FoodItem
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_food_item_view.view.*
 
