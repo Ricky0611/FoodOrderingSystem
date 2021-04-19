@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
+import com.example.rikki.foodorderingsystem.utils.AppController
 
 class SplashActivity : AppCompatActivity() {
 

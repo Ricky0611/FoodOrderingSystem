@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
+import com.example.rikki.foodorderingsystem.utils.AppController
 import kotlinx.android.synthetic.main.fragment_register.view.*
 import kotlinx.android.synthetic.main.fragment_reset.*
 import kotlinx.android.synthetic.main.fragment_reset.view.*
